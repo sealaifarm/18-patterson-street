@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>18 Patterson Street | New Residences in Dorchester, MA</title>
+<meta name="description" content="Two new three-bedroom residences at 18 Patterson Street, Dorchester, MA.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS (edit colors / fonts here) ============ */
+:root{
+  --ink:#171717; --muted:#6d6a65; --line:#e7e4de; --tint:#f5f3ef; --white:#fff;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  --nav-h:78px; --wrap:1240px; --pad:clamp(20px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{margin:0;font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.75;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+.frame img,.card .thumb img{mix-blend-mode:multiply}
+.frame.cover img{mix-blend-mode:normal}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+section{padding:clamp(72px,10vw,140px) 0}
+
+/* type */
+.eyebrow{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;color:var(--muted);margin:0 0 22px}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(2.8rem,7vw,6rem)}
+h2{font-size:clamp(2.2rem,4.6vw,3.8rem)}
+h1 em,h2 em{font-style:italic}
+p{margin:0 0 1.2em}
+.lead{font-size:1.06rem;color:var(--muted);max-width:34em}
+
+/* buttons */
+.btn{display:inline-block;padding:16px 38px;border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:400;transition:background .25s,color .25s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+
+/* placeholder marker: search the file for "ph" to find them all */
+/* .ph{background:repeating-linear-gradient(135deg,#fbf4d9,#fbf4d9 6px,#f7edc3 6px,#f7edc3 12px);color:#5b4a0b;padding:0 .35em;border-radius:2px;font-weight:400;-webkit-box-decoration-break:clone;box-decoration-break:clone} */
+
+/* ============ NAV ============ */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-color:var(--line)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:1.45rem;letter-spacing:.02em;line-height:1}
+.brand img{height:40px;width:auto}
+.brand small{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.menu{display:flex;gap:40px;align-items:center;list-style:none;margin:0;padding:0}
+.menu a{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .25s}
+.menu a:hover{border-color:var(--ink)}
+.menu a.cta{border:1px solid var(--ink);padding:11px 24px}
+.menu a.cta:hover{background:var(--ink);color:#fff}
+.burger{display:none;background:none;border:0;width:44px;height:44px;position:relative}
+.burger span,.burger span::before{position:absolute;left:11px;width:22px;height:1px;background:var(--ink);transition:transform .3s}
+.burger span{top:21px}.burger span::before{content:"";left:0;top:7px}
+.burger[aria-expanded=true] span{transform:rotate(45deg)}
+.burger[aria-expanded=true] span::before{transform:translateY(-7px) rotate(-90deg)}
+@media(max-width:860px){
+  .burger{display:block}
+  .menu{position:fixed;inset:var(--nav-h) 0 auto 0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .4s}
+  .menu.open{max-height:380px}
+  .menu li{width:100%;text-align:center}
+  .menu a{display:block;padding:20px;border:0}
+  .menu a.cta{border:0;padding:20px}
+}
+
+/* ============ HERO (luxury editorial split) ============ */
+.hero{padding:0;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:100vh;min-height:100svh;background:var(--white)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:calc(var(--nav-h) + clamp(40px,6vw,88px)) clamp(32px,5vw,88px) clamp(40px,6vw,80px) max(var(--pad),calc((100vw - var(--wrap))/2 + var(--pad)))}
+.hero-copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>*:nth-child(2){animation-delay:.12s}.hero-copy>*:nth-child(3){animation-delay:.24s}.hero-copy>*:nth-child(4){animation-delay:.36s}.hero-copy>*:nth-child(5){animation-delay:.5s}
+.hero .eyebrow{display:flex;align-items:center;gap:16px}
+.hero .eyebrow::before{content:"";width:44px;height:1px;background:var(--ink);opacity:.6}
+.hero h1{font-size:clamp(2.6rem,4.3vw,4.4rem);line-height:1;margin:0 0 28px;max-width:10em}
+.hero h1 em{display:block;color:var(--muted)}
+.hero .lead{margin:0 0 36px;max-width:26em}
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:28px}
+.hero .textlink{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:400;padding-bottom:6px;border-bottom:1px solid var(--ink);transition:opacity .25s}
+.hero .textlink:hover{opacity:.55}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-media{position:relative;background:var(--tint);overflow:hidden;animation:fade 1.4s ease both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.hero-media .frame{position:absolute;inset:0;aspect-ratio:auto;height:100%;background:transparent}
+.hero-media .frame img{height:100%;width:100%;max-width:100%;padding:calc(var(--nav-h) + 20px) clamp(20px,3vw,48px) 84px;object-fit:contain}
+.hero-media .frame.cover img{padding:0;object-fit:cover}
+.hero-media .caption{position:absolute;left:clamp(20px,3vw,48px);right:clamp(20px,3vw,48px);bottom:28px;margin:0;padding-top:14px;border-top:1px solid rgba(23,23,23,.25)}
+.hero-media.on-photo .caption{color:#fff;border-color:rgba(255,255,255,.5);text-shadow:0 1px 8px rgba(0,0,0,.35)}
+@media(max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr);min-height:0}
+  .hero-copy{padding:calc(var(--nav-h) + 40px) var(--pad) 56px}
+  .hero-media{height:auto;aspect-ratio:4/3}
+  .hero-media .frame img{padding:20px 16px 56px}
+  .hero-media .caption{flex-direction:row;bottom:18px}
+}
+
+/* feature image */
+.feature{padding:0 0 clamp(72px,10vw,140px)}
+.frame{position:relative;background:var(--tint);aspect-ratio:21/10;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.frame img{height:100%;width:auto;max-width:none;object-fit:contain;padding:clamp(14px,3vw,40px) 0}
+.frame.cover img{width:100%;height:100%;object-fit:cover;padding:0}
+.caption{display:flex;justify-content:space-between;gap:20px;margin-top:16px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:400}
+@media(max-width:700px){.frame{aspect-ratio:4/5}.caption{flex-direction:column;gap:6px}}
+
+/* ============ ABOUT ============ */
+.about .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,8vw,120px);align-items:start}
+.about h2{margin-bottom:0}
+.about .text p{color:var(--muted)}
+.about .text .btn{margin-top:14px}
+@media(max-width:860px){.about .grid{grid-template-columns:minmax(0,1fr)}}
+
+/* amenities */
+.amen{background:var(--tint);padding:clamp(64px,8vw,104px) 0}
+.amen header{text-align:center;margin-bottom:clamp(36px,5vw,64px)}
+.amen header h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.amen ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr)}
+.amen li{padding:12px 18px;text-align:center;font-family:var(--serif);font-size:1.3rem;line-height:1.25}
+.amen li+li{border-left:1px solid #d9d5cd}
+.amen li small{display:block;margin-top:10px;font-family:var(--sans);font-size:.7rem;letter-spacing:.04em;color:var(--muted);line-height:1.5}
+.amen .note{text-align:center;margin:36px 0 0;font-size:.78rem;color:var(--muted)}
+@media(max-width:980px){.amen ul{grid-template-columns:repeat(3,1fr);row-gap:30px}.amen li:nth-child(4){border-left:0}}
+@media(max-width:560px){.amen ul{grid-template-columns:repeat(2,1fr)}.amen li:nth-child(odd){border-left:0}.amen li:nth-child(3){border-left:0}.amen li:nth-child(4){border-left:1px solid #d9d5cd}}
+
+/* ============ RESIDENCES ============ */
+.section-head{text-align:center;margin-bottom:clamp(36px,5vw,64px)}
+.section-head p{color:var(--muted);margin:22px auto 0;max-width:36em}
+.pill{background:none;border:1px solid var(--line);padding:10px 24px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400;transition:all .25s}
+.pill:hover{border-color:var(--ink)}
+.pill[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,3vw,40px)}
+.card{border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .3s}
+.card:hover{border-color:var(--ink)}
+.card[hidden]{display:none}
+.card .thumb{background:var(--tint);aspect-ratio:4/3;display:flex;justify-content:center;overflow:hidden}
+.card .thumb img{height:100%;width:auto;padding:22px 0}
+.card .body{padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;flex:1}
+.card h3{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.1;margin:0 0 4px}
+.card .sub{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:400;margin:0 0 24px}
+.specs{margin:0 0 28px;padding:0}
+.specs div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--line);font-size:.92rem}
+.specs dt{color:var(--muted)}.specs dd{margin:0;text-align:right}
+.card .btns{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}}
+
+/* ============ PLANS ============ */
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+#plans{background:var(--tint)}
+#plans .pill{border-color:#d6d2c9}
+#plans .pill:hover,#plans .pill[aria-pressed=true]{border-color:var(--ink)}
+.plan{border:1px solid var(--line);background:#fff;cursor:zoom-in;position:relative}
+.plan{aspect-ratio:16/9}
+.plan img{width:100%;height:100%;object-fit:contain}
+.plan .miss{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:.8rem;color:var(--muted);text-align:center;padding:20px}
+.plan.missing img{visibility:hidden}
+.plan.missing .miss{display:flex}
+.plan.missing .hint{display:none}
+.plan .hint{position:absolute;right:14px;bottom:14px;background:var(--ink);color:#fff;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;font-weight:400}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(255,255,255,.98);display:none;overflow:auto}
+.lb.open{display:block}
+.lb img{width:max(100%,1500px);height:auto;max-width:none;aspect-ratio:16/9;object-fit:contain}
+.lb button{position:fixed;top:14px;right:14px;z-index:2;background:var(--ink);color:#fff;border:0;padding:12px 22px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+
+/* ============ CONTACT ============ */
+.contact{border-top:1px solid var(--line)}
+.contact .section-head{margin-bottom:clamp(36px,5vw,60px)}
+.inq{display:grid;grid-template-columns:1fr 1fr;gap:30px 36px;max-width:760px;margin:0 auto}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{line-height:20px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400;color:var(--muted)}
+.field label .opt{letter-spacing:.04em;text-transform:none;font-size:.78rem;color:#9a968f;margin-left:8px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #cfcac1;border-radius:0;padding:10px 0;transition:border-color .25s,box-shadow .25s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 1px 0 var(--ink)}
+.field [aria-invalid=true]{border-color:#a8412f;box-shadow:0 1px 0 #a8412f}
+.field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:26px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none' stroke='%23171717' stroke-width='1.2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 4px center}
+.field textarea{min-height:110px;resize:vertical;line-height:1.6}
+.field .err{font-size:.78rem;color:#a8412f;min-height:0}
+.inq .actions{grid-column:1/-1;text-align:center;margin-top:10px}
+.inq .btn{cursor:pointer}
+.msg{margin:26px auto 0;max-width:560px;text-align:center;min-height:1.6em;font-size:.95rem}
+.msg.ok{color:var(--ink)}
+.msg.bad{color:#a8412f}
+@media(max-width:640px){.inq{grid-template-columns:1fr;gap:26px}}
+
+/* contact: split layout, details left, boxed form right */
+.contact{background:var(--tint);border-top:0}
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,7vw,110px);align-items:start}
+.contact-info h2{margin-bottom:28px}
+.contact-info .lead{margin-bottom:44px}
+.reach{margin:0;padding:0;border-top:1px solid #d9d5cd}
+.reach div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid #d9d5cd;align-items:baseline}
+.reach dt{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.reach dd{margin:0;font-family:var(--serif);font-size:1.45rem;line-height:1.3;overflow-wrap:anywhere}
+.reach dd a{border-bottom:1px solid transparent;transition:border-color .25s}
+.reach dd a:hover{border-color:var(--ink)}
+.contact-card{background:var(--white);padding:clamp(28px,4vw,52px);border:1px solid var(--line)}
+.contact-card .inq{max-width:none;margin:0;gap:26px 24px}
+.contact-card .inq .actions{text-align:left;margin-top:6px}
+.contact-card .field input,.contact-card .field select,.contact-card .field textarea{border:1px solid transparent;border-bottom-color:#cfcac1;padding:13px 14px}
+.contact-card .field select{padding-right:34px;background-position:right 14px center}
+.contact-card .field input::placeholder,.contact-card .field textarea::placeholder{color:#a9a59d}
+.contact-card .field input:focus,.contact-card .field select:focus,.contact-card .field textarea:focus{background:var(--white);border-color:var(--ink);box-shadow:none}
+.contact-card .msg{margin:22px 0 0;text-align:left;max-width:none}
+@media(max-width:900px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:640px){.reach div{grid-template-columns:1fr;gap:4px}}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line);padding:56px 0 40px;font-size:.88rem;color:var(--muted)}
+footer .row{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap}
+footer .name{font-family:var(--serif);font-size:1.6rem;color:var(--ink);line-height:1.1;margin-bottom:10px}
+footer address{font-style:normal;line-height:1.8}
+footer a:hover{color:var(--ink)}
+footer .legal{margin-top:44px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="18 Patterson Street, home">
+      <img id="logo" alt="" hidden>
+      <span id="wordmark">18 Patterson<small>Dorchester</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#units">Residences</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#contact" class="cta">Inquire</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Dorchester &middot; Patterson Street</p>
+    <h1>Two New Residences <em>on Patterson Street</em></h1>
+    <p class="lead">Two three-bedroom homes on a corner lot at Patterson and Brookvale Streets.</p>
+    <div class="actions">
+      <a href="#contact" class="btn">Inquire Now</a>
+      <a href="#units" class="textlink">View Residences</a>
+    </div>
+  </div>
+  <div class="hero-media" id="heroMedia">
+    <div class="frame" id="heroFrame"><img src="front-elevation.webp" alt="Front elevation of 18 Patterson Street"></div>
+    <div class="caption"><span>18 Patterson Street</span><span>Dorchester, MA</span></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">18 Patterson Street</p>
+      <h2>New homes, <em>carefully built</em></h2>
+    </div>
+    <div class="text">
+      <p>18 Patterson Street brings two new three-bedroom residences to Dorchester. Each home spans three stories and is finished with fiber cement siding, a covered entry, and energy-efficient windows.</p>
+      <p>Inside, the plans call for hardwood stairs, tiled bathrooms, solid surface kitchen countertops, and laundry on the upper floors, with off-street parking on site.</p>
+      <a href="#units" class="btn ghost">Explore Residences</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES STRIP ============ -->
+<div class="amen" id="features">
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">Home features</p>
+      <h2>Thoughtful details</h2>
+    </header>
+    <ul>
+      <li>Off-Street Parking<small>2 on-site spaces</small></li>
+      <li>Andersen Windows<small>Low-E glazing</small></li>
+      <li>Laundry<small>Upper-floor laundry areas</small></li>
+      <li>Hardwood Stairs<small>Hardwood treads</small></li>
+      <li>Tiled Bathrooms<small>Ceramic floors and tub surrounds</small></li>
+      <li>Outdoor Space<small>Landscaped grounds</small></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ RESIDENCES ============ -->
+<section id="units">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The residences</p>
+      <h2>Choose <em>your home</em></h2>
+      <p>Two three-bedroom residences</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="thumb"><img src="front-elevation.webp" alt="Front elevation of Residence 1"></div>
+        <div class="body">
+          <h3>Residence 1</h3>
+          <p class="sub">Three bedrooms</p>
+          <dl class="specs">
+            <div><dt>Bedrooms</dt><dd>3</dd></div>
+            <div><dt>Bathrooms</dt><dd>3</dd></div>
+            <div><dt>Stories</dt><dd>3</dd></div>
+            <div><dt>Interior size</dt><dd>1,603+ sq ft</dd></div>
+            <div><dt>Parking</dt><dd>1 space per residence</dd></div>
+            <div><dt>Price</dt><dd>Inquire for pricing</dd></div>
+          </dl>
+          <div class="btns">
+            <a href="#contact" class="btn" data-residence="Residence 1">Inquire</a>
+            <a href="#plans" class="btn ghost">View Plans</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="front-elevation.webp" alt="Front elevation of Residence 2"></div>
+        <div class="body">
+          <h3>Residence 2</h3>
+          <p class="sub">Three bedrooms</p>
+          <dl class="specs">
+            <div><dt>Bedrooms</dt><dd>3</dd></div>
+            <div><dt>Bathrooms</dt><dd>3</dd></div>
+            <div><dt>Stories</dt><dd>3</dd></div>
+            <div><dt>Interior size</dt><dd>1,603+ sq ft</dd></div>
+            <div><dt>Parking</dt><dd>1 space per residence</dd></div>
+            <div><dt>Price</dt><dd>Inquire for pricing</dd></div>
+          </dl>
+          <div class="btns">
+            <a href="#contact" class="btn" data-residence="Residence 2">Inquire</a>
+            <a href="#plans" class="btn ghost">View Plans</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANS ============ -->
+<section id="plans">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Plans</p>
+      <h2>Floor plans <em>and elevations</em></h2>
+      <p>Select a drawing, then click to enlarge.</p>
+    </div>
+    <div class="tabs" id="tabs" role="group" aria-label="Plan drawings"></div>
+    <div class="plan" id="plan" role="button" tabindex="0" aria-label="Enlarge drawing"><img id="planImg" alt=""><span class="miss" id="planMissing"></span><span class="hint">Click to enlarge</span></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <p class="eyebrow">Contact</p>
+      <h2>Inquire about <em>a residence</em></h2>
+      <p class="lead">Tell us which home interests you and we&rsquo;ll follow up with pricing, availability, and private viewing details.</p>
+      <dl class="reach">
+        <div><dt>Email</dt><dd id="contactEmail"></dd></div>
+        <div><dt>Phone</dt><dd id="contactPhone"></dd></div>
+        <div><dt>Address</dt><dd>18 Patterson Street<br>Dorchester, MA 02124</dd></div>
+      </dl>
+    </div>
+    <div class="contact-card">
+      <form class="inq" id="form" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required>
+          <span class="err" id="nameErr"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+          <span class="err" id="emailErr"></span>
+        </div>
+        <div class="field">
+          <label for="phone">Phone <span class="opt">Optional</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
+        </div>
+        <div class="field">
+          <label for="residence">Residence of interest</label>
+          <select id="residence" name="residence">
+            <option>Residence 1</option>
+            <option>Residence 2</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Message <span class="opt">Optional</span></label>
+          <textarea id="message" name="message" placeholder="Questions, preferred times to view, anything else"></textarea>
+        </div>
+        <div class="actions"><button type="submit" class="btn">Submit Inquiry</button></div>
+      </form>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <div class="name">18 Patterson Street</div>
+        <address>
+          18 Patterson Street, Dorchester, MA 02124<br>
+          <span id="mailLine"></span><br>
+          <span id="phoneLine"></span>
+        </address>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 18 Patterson Street. All rights reserved.</span>
+      <span>Architecture by 686 Architects</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" aria-modal="true" role="dialog" aria-label="Enlarged plan"><button id="lbClose">Close</button><img id="lbImg" alt=""></div>
+
+<script>
+/* ===================================================================
+   EDIT ME: everything that changes between projects lives here.
+   =================================================================== */
+const CONFIG = {
+  // INQUIRY FORM: set ONE of these so the form actually delivers messages.
+  //  email:        inquiries open in the visitor's email app, addressed to this address.
+  //  formEndpoint: a Formspree / Netlify / similar URL that accepts a JSON POST.
+  // If both are empty, the form tells visitors it isn't connected yet.
+  email: "",
+  formEndpoint: "",
+  phone: "",       // e.g. "(617) 555-0123". Shown in Contact + footer; placeholder until set.
+  logo: "logo.png", // e.g. "logo.png". If empty, a text wordmark is shown.
+  heroImage: "",   // e.g. "exterior.jpg". If empty, the front elevation drawing is shown.
+  // Floor plans & elevations: 16:9 PNGs placed in the same folder as this file.
+  // Change a filename here if yours differ.
+  plans: [
+    {file: "front-elevation.webp", label: "Front Elevation"},
+    {file: "basement.webp",        label: "Basement"},
+    {file: "first-floor.webp",     label: "First Floor"},
+    {file: "second-floor.webp",    label: "Second Floor"},
+    {file: "third-floor.webp",     label: "Third Floor"},
+    {file: "roof.webp",            label: "Roof"},
+    {file: "rear-elevation.webp",  label: "Rear Elevation"}
+  ]
+};
+
+/* ---------- code below rarely needs editing ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+if (CONFIG.logo) { const l = $("#logo"); l.src = CONFIG.logo; l.hidden = false; $("#wordmark").hidden = true; }
+if (CONFIG.heroImage) { const f = $("#heroFrame"); f.classList.add("cover"); $("#heroMedia").classList.add("on-photo"); $("img", f).src = CONFIG.heroImage; }
+
+// contact details (placeholders show only until email / phone are set in CONFIG)
+const emailHTML = CONFIG.email ? `<a href="mailto:${CONFIG.email}">${CONFIG.email}</a>` : '<span class="ph">[Contact email]</span>';
+const phoneHTML = CONFIG.phone ? `<a href="tel:${CONFIG.phone.replace(/[^+\d]/g,"")}">${CONFIG.phone}</a>` : '<span class="ph">[Phone number]</span>';
+$("#mailLine").innerHTML = emailHTML; $("#phoneLine").innerHTML = phoneHTML;
+$("#contactEmail").innerHTML = emailHTML; $("#contactPhone").innerHTML = phoneHTML;
+
+// nav
+const nav = $("#nav"), burger = $("#burger"), menu = $("#menu");
+const onScroll = () => nav.classList.toggle("scrolled", scrollY > 8);
+addEventListener("scroll", onScroll, {passive: true}); onScroll();
+burger.addEventListener("click", () => { const o = menu.classList.toggle("open"); burger.setAttribute("aria-expanded", o); });
+$$("#menu a").forEach(a => a.addEventListener("click", () => { menu.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
+
+// plans
+const tabs = $("#tabs");
+CONFIG.plans.forEach((p, i) => {
+  const b = document.createElement("button");
+  b.className = "pill"; b.textContent = p.label; b.setAttribute("aria-pressed", i === 0);
+  b.addEventListener("click", () => showPlan(i)); tabs.appendChild(b);
+});
+function showPlan(i) {
+  const p = CONFIG.plans[i];
+  $$("#tabs .pill").forEach((b, j) => b.setAttribute("aria-pressed", i === j));
+  const img = $("#planImg");
+  $("#plan").classList.remove("missing");
+  img.src = p.file; img.alt = p.label;
+  $("#plan").dataset.file = p.file;
+  $("#planMissing").textContent = "Image not found: " + p.file;
+}
+$("#planImg").addEventListener("error", () => $("#plan").classList.add("missing"));
+showPlan(0);
+
+// lightbox
+const lb = $("#lb");
+const openLb = () => { if ($("#plan").classList.contains("missing")) return; $("#lbImg").src = $("#plan").dataset.file; lb.classList.add("open"); document.body.style.overflow = "hidden"; $("#lbClose").focus(); };
+const closeLb = () => { lb.classList.remove("open"); document.body.style.overflow = ""; };
+$("#plan").addEventListener("click", openLb);
+$("#plan").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLb(); } });
+$("#lbClose").addEventListener("click", closeLb);
+addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); });
+
+// "Inquire" buttons on the residence cards preselect that residence
+$$("[data-residence]").forEach(a => a.addEventListener("click", () => { $("#residence").value = a.dataset.residence; }));
+
+// inquiry form
+const form = $("#form"), msg = $("#msg");
+const setErr = (id, text) => { const el = $("#" + id); el.setAttribute("aria-invalid", !!text); $("#" + id + "Err").textContent = text; };
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  msg.className = "msg"; msg.textContent = "";
+  const d = Object.fromEntries(new FormData(form));
+  d.name = d.name.trim(); d.email = d.email.trim();
+  setErr("name", d.name ? "" : "Please enter your name.");
+  setErr("email", /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email) ? "" : "Please enter a valid email address.");
+  if (!d.name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)) return;
+
+  if (CONFIG.formEndpoint) {
+    try {
+      const r = await fetch(CONFIG.formEndpoint, {method: "POST", headers: {"Content-Type": "application/json", "Accept": "application/json"}, body: JSON.stringify(d)});
+      if (!r.ok) throw 0;
+      msg.className = "msg ok"; msg.textContent = "Thank you. Your inquiry has been received."; form.reset();
+    } catch { msg.className = "msg bad"; msg.textContent = "Your inquiry could not be sent. Please try again" + (CONFIG.email ? " or email " + CONFIG.email : "") + "."; }
+  } else if (CONFIG.email) {
+    const body = ["Name: " + d.name, "Email: " + d.email, d.phone ? "Phone: " + d.phone : "", "Residence of interest: " + d.residence, d.message ? "\nMessage:\n" + d.message : ""].filter(Boolean).join("\n");
+    location.href = "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("Inquiry: " + d.residence + " at 18 Patterson Street") + "&body=" + encodeURIComponent(body);
+    msg.className = "msg ok"; msg.textContent = "Your email app should now open with your inquiry. Press send there to complete it.";
+  } else {
+    msg.className = "msg bad"; msg.textContent = "This inquiry form is not connected yet, so nothing was sent. Please check back soon.";
+  }
+});
+</script>
+
+</body>
+</html>
