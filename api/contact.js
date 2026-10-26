@@ -8,13 +8,13 @@ const RESEND_API_KEY = process.env.RESEND_API_KEY;
 // SETTINGS: edit the values below.
 // const CONTACT_TO = ['will@galvingroupre.com', 'craig@galvingroupre.com']; // Inboxes that receive inquiries
 const CONTACT_TO = ['sealaifarm@gmail.com']; // Inboxes that receive inquiries
-const CONTACT_FROM = 'inquiries@18patterson.com';     // Verified Resend sender, e.g. '18 Patterson Street <inquiries@18patterson.com>'
-const SITE_URL = '';         // Optional. Public site URL, e.g. 'https://yourdomain.com'
+const CONTACT_FROM = '18 Patterson <inquiries@18patterson.com>'; // Verified Resend sender with display name
+const SITE_URL = 'https://18patterson.com/';         // Optional. Public site URL, e.g. 'https://yourdomain.com'
 const SHOW_ERROR_DETAILS = false; // true while testing: returns Resend's error reason to the browser
 
 const BRAND = '18 Patterson Street';
 const ADDRESS = '18 Patterson Street, Dorchester, MA 02124';
-const ACCENT = '#007cbc';
+const LOGO_URL = 'https://18patterson.com/images/logo.png';
 const INTERESTS = ['Residence 1', 'Residence 2'];
 
 /* ---------- helpers ---------- */
@@ -91,9 +91,9 @@ function layout({ preheader, heading, intro, rows = [], closing = '' }) {
   const closingHtml = closing
     ? `<tr><td class="t-body" style="padding:32px 0 0;font-family:${FONT_SANS};font-size:15px;line-height:26px;color:#4a4a4a;">${closing}</td></tr>`
     : '';
-  const wordmark = `<span class="t-main" style="font-family:${FONT_SERIF};font-size:22px;line-height:28px;color:#1a1a1a;">${esc(BRAND)}</span><br><span class="t-muted" style="font-family:${FONT_SANS};font-size:10px;line-height:16px;letter-spacing:0.28em;text-transform:uppercase;color:#8c8c8c;">Dorchester</span>`;
+  const wordmark = `<img src="${esc(LOGO_URL)}" alt="${esc(BRAND)}" width="160" style="display:block;border:0;outline:none;text-decoration:none;width:160px;max-width:100%;height:auto;font-family:${FONT_SERIF};font-size:22px;line-height:28px;color:#1a1a1a;">`;
   const header = SITE_URL
-    ? `<a href="${esc(SITE_URL)}" target="_blank" style="text-decoration:none;">${wordmark}</a>`
+    ? `<a href="${esc(SITE_URL)}" target="_blank" style="text-decoration:none;color:inherit;">${wordmark}</a>`
     : wordmark;
 
   return `<!DOCTYPE html>
@@ -104,12 +104,16 @@ function layout({ preheader, heading, intro, rows = [], closing = '' }) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="color-scheme" content="light dark">
   <meta name="supported-color-schemes" content="light dark">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
   <title>${esc(BRAND)}</title>
   <style>
     :root { color-scheme: light dark; supported-color-schemes: light dark; }
     body { margin:0; padding:0; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
     table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
-    a { color:${ACCENT}; }
+    a { color:inherit; text-decoration:none; }
+    /* Stop mail clients from turning addresses, dates and phone numbers into blue underlined links */
+    a[x-apple-data-detectors] { color:inherit !important; text-decoration:none !important; font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important; }
+    u + #body a, #MessageViewBody a { color:inherit !important; text-decoration:none !important; font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important; }
     @media only screen and (max-width:600px) {
       .outer { padding:32px 20px 40px !important; }
       .heading { font-size:22px !important; line-height:30px !important; }
@@ -118,7 +122,6 @@ function layout({ preheader, heading, intro, rows = [], closing = '' }) {
     @media (prefers-color-scheme: dark) {
       body, .bg { background-color:#0f0f0f !important; }
       .t-main { color:#f5f5f5 !important; }
-      .link { color:#5cc0ee !important; }
       .t-body { color:#c4c4c4 !important; }
       .t-muted { color:#8f8f8f !important; }
       .divider { border-color:#2b2b2b !important; }
@@ -126,13 +129,12 @@ function layout({ preheader, heading, intro, rows = [], closing = '' }) {
     /* Dark mode: Outlook.com and Outlook apps */
     [data-ogsb] body, [data-ogsb] .bg { background-color:#0f0f0f !important; }
     [data-ogsc] .t-main { color:#f5f5f5 !important; }
-    [data-ogsc] .link { color:#5cc0ee !important; }
     [data-ogsc] .t-body { color:#c4c4c4 !important; }
     [data-ogsc] .t-muted { color:#8f8f8f !important; }
     [data-ogsc] .divider { border-color:#2b2b2b !important; }
   </style>
 </head>
-<body class="bg" style="margin:0;padding:0;background-color:#ffffff;">
+<body id="body" class="bg" style="margin:0;padding:0;background-color:#ffffff;">
   <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${esc(preheader)}&#8203;&zwnj;&#8203;&zwnj;&#8203;&zwnj;</div>
   <table role="presentation" class="bg" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;">
     <tr>
@@ -170,7 +172,7 @@ function companyEmail({ name, email, interest, message, submittedAt }) {
     intro: 'A new message was submitted through the contact form. You can reply directly to this email to respond to the sender.',
     rows: [
       { label: 'Name', html: esc(name) },
-      { label: 'Email', html: `<a class="link" href="mailto:${esc(email)}" style="color:${ACCENT};text-decoration:underline;">${esc(email)}</a>` },
+      { label: 'Email', html: `<a class="t-main" href="mailto:${esc(email)}" style="color:#1a1a1a;text-decoration:none;">${esc(email)}</a>` },
       { label: 'Interest', html: esc(interest) },
       { label: 'Message', html: multiline(message) },
       { label: 'Submitted', html: esc(submittedAt) }
