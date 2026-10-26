@@ -24,7 +24,7 @@
   "@context": "https://schema.org",
   "@type": "Residence",
   "name": "18 Patterson Street",
-  "description": "Two new three-bedroom, three-bath residences on the corner of Patterson and Brookvale Streets in Dorchester, Massachusetts.",
+  "description": "Two new three-bedroom, two-and-a-half-bath residences on the corner of Patterson and Brookvale Streets in Dorchester, Massachusetts.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "18 Patterson Street",
@@ -34,8 +34,8 @@
     "addressCountry": "US"
   },
   "containsPlace": [
-    {"@type": "Accommodation", "name": "Residence 1", "numberOfBedrooms": 3, "numberOfBathroomsTotal": 3, "floorSize": {"@type": "QuantitativeValue", "minValue": 1603, "unitCode": "FTK"}},
-    {"@type": "Accommodation", "name": "Residence 2", "numberOfBedrooms": 3, "numberOfBathroomsTotal": 3, "floorSize": {"@type": "QuantitativeValue", "minValue": 1603, "unitCode": "FTK"}}
+    {"@type": "Accommodation", "name": "Residence 1", "numberOfBedrooms": 3, "numberOfBathroomsTotal": 2.5, "floorSize": {"@type": "QuantitativeValue", "minValue": 1603, "unitCode": "FTK"}},
+    {"@type": "Accommodation", "name": "Residence 2", "numberOfBedrooms": 3, "numberOfBathroomsTotal": 2.5, "floorSize": {"@type": "QuantitativeValue", "minValue": 1603, "unitCode": "FTK"}}
   ]
 }
 </script>
@@ -119,7 +119,7 @@ p{margin:0 0 1.2em}
 .hero-media{position:relative;overflow:hidden;background:var(--ink);aspect-ratio:5/4;max-height:calc(100vh - var(--nav-h) - 80px);min-height:420px;width:auto;align-self:center;
   /* bleed to the right edge of the viewport instead of floating inside the page margins */
   margin-right:calc(-1 * max(var(--pad), (100vw - var(--wrap)) / 2 + var(--pad)))}
-.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:heroZoom 18s ease-out forwards;mix-blend-mode:normal}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1);mix-blend-mode:normal}
 .hero-media .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,15,.05) 60%,rgba(20,18,15,.35) 100%)}
 .hero-tag{position:absolute;left:20px;bottom:20px;z-index:2;background:rgba(255,255,255,.94);color:var(--ink);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:9px 16px}
 @keyframes heroZoom{from{transform:scale(1.06)}to{transform:scale(1)}}
@@ -318,7 +318,7 @@ footer .footer-credit img{height:22px;width:auto;display:block;filter:brightness
   <div class="hero-copy">
     <p class="eyebrow">New Residences &middot; Dorchester</p>
     <h1>Come Home <em>to Patterson Street</em></h1>
-    <p class="lead">Two new three-bedroom, three-bath residences at the corner of Patterson and Brookvale Streets in Dorchester, Massachusetts.</p>
+    <p class="lead">Two new three-bedroom, two-and-a-half-bath residences at the corner of Patterson and Brookvale Streets in Dorchester, Massachusetts.</p>
     <div class="actions">
       <a href="#contact" class="btn">Inquire Now</a>
       <a href="#units" class="textlink">Discover the Residences</a>
@@ -340,9 +340,9 @@ footer .footer-credit img{height:22px;width:auto;display:block;filter:brightness
       <h2>A New Chapter <em>for Patterson Street</em></h2>
     </div>
     <div class="text">
-      <p>18 Patterson brings two new residences to a residential corner of Dorchester. Each home offers three bedrooms, three baths, and more than 1,603 square feet across three stories.</p>
-      <p>The exterior features durable fiber cement siding, a covered entry, and energy-efficient windows. Inside, hardwood stairs, tiled bathrooms, and solid-surface kitchen countertops bring together practical details and a clean, contemporary aesthetic. Laundry is located on the upper floors, with off-street parking on site.</p>
-      <p>Designed by 686 Architects, the residences offer a considered take on modern living in Dorchester.</p>
+      <p>18 Patterson brings two new residences to a residential corner of Dorchester. Each home offers three bedrooms, two and a half baths, and more than 1,603 square feet across three stories.</p>
+      <p>The exterior features durable fiber cement siding, a covered entry, and energy-efficient windows. Inside, wide-plank hardwood floors run throughout, complemented by hardwood stairs, Italian marble tiling, ornate bathroom tilework, and solid-surface kitchen countertops, bringing together practical details and a clean, contemporary aesthetic. Laundry is located on the upper floors, with off-street parking on site.</p>
+      <p>Designed by one of Dorchester’s premier designers, the residences bring a fresh, modern feel to Patterson Street.</p>
       <a href="#units" class="btn ghost">Explore the Residences</a>
     </div>
   </div>
@@ -372,9 +372,9 @@ footer .footer-credit img{height:22px;width:auto;display:block;filter:brightness
       <li>Off-Street Parking<small>Two on-site parking spaces</small></li>
       <li>Andersen Windows<small>Energy-efficient Low-E glazing</small></li>
       <li>Upper-Floor Laundry<small>Conveniently located laundry areas</small></li>
-      <li>Hardwood Stairs<small>Hardwood treads throughout the stairs</small></li>
-      <li>Tiled Bathrooms<small>Ceramic tile floors and tub surrounds</small></li>
-      <li>Landscaped Grounds<small>Outdoor surroundings with a finished landscape</small></li>
+      <li>Wide-Plank Hardwood<small>Wide-plank hardwood floors throughout, with hardwood stairs</small></li>
+      <li>Italian Marble Tilework<small>Italian marble tiling and ornate bathroom tilework</small></li>
+      <li>Landscaped Grounds<small>Refined landscaping that complements the architecture.</small></li>
     </ul>
   </div>
 </div>
@@ -385,12 +385,12 @@ footer .footer-credit img{height:22px;width:auto;display:block;filter:brightness
     <div class="section-head">
       <p class="eyebrow">The residences</p>
       <h2>Two Homes, <em>One Corner Lot</em></h2>
-      <p>Two residences, each offering three bedrooms, three baths, and three stories of living space.</p>
+      <p>Two residences, each offering three bedrooms, two and a half baths, and three stories of living space.</p>
     </div>
     <div class="res">
       <ul class="res-stats">
         <li><b>3</b><span>Bedrooms</span></li>
-        <li><b>3</b><span>Baths</span></li>
+        <li><b>2.5</b><span>Baths</span></li>
         <li><b>3</b><span>Stories</span></li>
         <li><b>1,603+</b><span>Sq Ft Each</span></li>
       </ul>
@@ -490,7 +490,7 @@ footer .footer-credit img{height:22px;width:auto;display:block;filter:brightness
     </div>
     <div class="legal">
       <span>&copy; 2026 18 Patterson Street. All rights reserved.</span>
-      <span>Architecture by 686 Architects</span>
+      <span>Designed by one of Dorchester’s premier designers</span>
     </div>
     <div class="footer-credit">
       <span>Made by</span>

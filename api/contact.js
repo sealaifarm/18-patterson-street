@@ -6,8 +6,9 @@
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 // SETTINGS: edit the values below.
-const CONTACT_TO = '';       // Inbox that receives inquiries, e.g. 'inquiries@yourdomain.com'
-const CONTACT_FROM = '';     // Verified Resend sender, e.g. '18 Patterson Street <inquiries@yourdomain.com>'
+// const CONTACT_TO = ['will@galvingroupre.com', 'craig@galvingroupre.com']; // Inboxes that receive inquiries
+const CONTACT_TO = ['sealaifarm@gmail.com']; // Inboxes that receive inquiries
+const CONTACT_FROM = 'inquiries@18patterson.com';     // Verified Resend sender, e.g. '18 Patterson Street <inquiries@18patterson.com>'
 const SITE_URL = '';         // Optional. Public site URL, e.g. 'https://yourdomain.com'
 const SHOW_ERROR_DETAILS = false; // true while testing: returns Resend's error reason to the browser
 
@@ -262,7 +263,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ success: false, error: 'Method not allowed' });
   }
 
-  const missing = Object.entries({ RESEND_API_KEY, CONTACT_TO, CONTACT_FROM }).filter(([, v]) => !v).map(([k]) => k);
+  const missing = Object.entries({ RESEND_API_KEY, CONTACT_TO, CONTACT_FROM }).filter(([, v]) => !v || (Array.isArray(v) && !v.length)).map(([k]) => k);
   if (missing.length) {
     console.error('Missing RESEND_API_KEY env var or settings at the top of api/contact.js:', missing.join(', '));
     return res.status(500).json({ success: false, error: 'Email service is not configured' });
@@ -300,7 +301,7 @@ module.exports = async function handler(req, res) {
     const company = companyEmail({ name, email, interest, message, submittedAt });
     await sendWithResend({
       from: CONTACT_FROM,
-      to: [CONTACT_TO],
+      to: CONTACT_TO,
       reply_to: email,
       subject: `New inquiry: ${interest} from ${name}`,
       html: company.html,
