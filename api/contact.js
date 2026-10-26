@@ -6,8 +6,7 @@
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 // SETTINGS: edit the values below.
-// const CONTACT_TO = ['will@galvingroupre.com', 'craig@galvingroupre.com']; // Inboxes that receive inquiries
-const CONTACT_TO = ['sealaifarm@gmail.com']; // Inboxes that receive inquiries
+const CONTACT_TO = ['will@galvingroupre.com', 'craig@galvingroupre.com']; // Inboxes that receive inquiries
 const CONTACT_FROM = '18 Patterson <inquiries@18patterson.com>'; // Verified Resend sender with display name
 const SITE_URL = 'https://18patterson.com/';         // Optional. Public site URL, e.g. 'https://yourdomain.com'
 const SHOW_ERROR_DETAILS = false; // true while testing: returns Resend's error reason to the browser
