@@ -166,6 +166,7 @@ p{margin:0 0 1.2em}
 .tile{position:relative;display:block;overflow:hidden;background:var(--tint);border:0;padding:0;cursor:zoom-in;grid-column:span 6}
 .tile:nth-child(1){grid-column:span 8;grid-row:span 2}
 .tile:nth-child(2),.tile:nth-child(3){grid-column:span 4}
+.tile:last-child:nth-child(even){grid-column:span 12}
 .tile img{width:100%;height:100%;object-fit:cover;mix-blend-mode:normal;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
 .tile:hover img,.tile:focus-visible img{transform:scale(1.045)}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 65%,rgba(16,24,32,.28));opacity:0;transition:opacity .4s;pointer-events:none}
@@ -342,7 +343,7 @@ footer .footer-credit img{height:22px;width:auto;display:block;filter:brightness
     </div>
     <div class="text">
       <p>18 Patterson brings two new residences to a residential corner of Dorchester. Each home offers three bedrooms, two and a half baths, and 1,754 square feet across three stories.</p>
-      <p>The exterior features durable fiber cement siding, a covered entry, and energy-efficient windows. Inside, wide-plank hardwood floors run throughout, complemented by hardwood stairs, Italian marble tiling, ornate bathroom tilework, and solid-surface kitchen countertops, bringing together practical details and a clean, contemporary aesthetic. Laundry is located on the upper floors, with off-street parking on site.</p>
+      <p>The exterior features durable fiber cement siding, a covered entry, and energy-efficient windows. Inside, wide-plank hardwood floors run throughout, complemented by hardwood stairs, ornate bathroom tilework, and solid-surface kitchen countertops, bringing together practical details and a clean, contemporary aesthetic. Laundry is located on the upper floors, with off-street parking on site.</p>
       <p>Designed by one of Dorchester’s premier designers, the residences bring a fresh, modern feel to Patterson Street.</p>
       <a href="#units" class="btn ghost">Explore the Residences</a>
     </div>
@@ -374,7 +375,7 @@ footer .footer-credit img{height:22px;width:auto;display:block;filter:brightness
       <li>Quality Windows<small>Energy-efficient windows throughout</small></li>
       <li>Upper-Floor Laundry<small>Conveniently located laundry areas</small></li>
       <li>Wide-Plank Hardwood<small>Wide-plank hardwood floors throughout, with hardwood stairs</small></li>
-      <li>Italian Marble Tilework<small>Italian marble tiling and ornate bathroom tilework</small></li>
+      <li>Modern Tilework<small>Ornate bathroom tilework</small></li>
       <li>Landscaped Grounds<small>Refined landscaping that complements the architecture.</small></li>
     </ul>
   </div>
@@ -524,7 +525,7 @@ const CONFIG = {
   phone: "",
   logo: "images/logo.png",  // leave empty to show the text wordmark
   heroImage: "",            // leave empty to use images/hero-bg.webp
-  // Interior renderings (9), placed in the images folder. Rename files/labels to match yours.
+  // Interior renderings (10), placed in the images folder. Rename files/labels to match yours.
   // Leave a label empty to show just the image number.
   interiors: [
     {file: "images/interior-1.webp", label: "", alt: "Interior rendering 1 of the residences at 18 Patterson Street, Dorchester, MA"},
@@ -535,7 +536,8 @@ const CONFIG = {
     {file: "images/interior-6.webp", label: "", alt: "Interior rendering 6 of the residences at 18 Patterson Street, Dorchester, MA"},
     {file: "images/interior-7.webp", label: "", alt: "Interior rendering 7 of the residences at 18 Patterson Street, Dorchester, MA"},
     {file: "images/interior-8.webp", label: "", alt: "Interior rendering 8 of the residences at 18 Patterson Street, Dorchester, MA"},
-    {file: "images/interior-9.webp", label: "", alt: "Interior rendering 9 of the residences at 18 Patterson Street, Dorchester, MA"}
+    {file: "images/interior-9.webp", label: "", alt: "Interior rendering 9 of the residences at 18 Patterson Street, Dorchester, MA"},
+    {file: "images/interior-10.webp", label: "", alt: "Interior rendering 10 of the residences at 18 Patterson Street, Dorchester, MA"}
   ]
 };
 
