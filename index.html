@@ -166,7 +166,7 @@ p{margin:0 0 1.2em}
 .tile{position:relative;display:block;overflow:hidden;background:var(--tint);border:0;padding:0;cursor:zoom-in;grid-column:span 6}
 .tile:nth-child(1){grid-column:span 8;grid-row:span 2}
 .tile:nth-child(2),.tile:nth-child(3){grid-column:span 4}
-.tile:last-child:nth-child(even){grid-column:span 12}
+.tile:last-child:nth-child(even){grid-column:span 12;grid-row:span 2}
 .tile img{width:100%;height:100%;object-fit:cover;mix-blend-mode:normal;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
 .tile:hover img,.tile:focus-visible img{transform:scale(1.045)}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 65%,rgba(16,24,32,.28));opacity:0;transition:opacity .4s;pointer-events:none}
@@ -176,7 +176,7 @@ p{margin:0 0 1.2em}
 .interiors .note{text-align:center;margin:36px 0 0;font-size:.78rem;color:var(--muted)}
 @media(max-width:700px){
   .interiors .mosaic{grid-template-columns:minmax(0,1fr);grid-auto-rows:auto}
-  .tile,.tile:nth-child(n){grid-column:auto;grid-row:auto;aspect-ratio:4/3}
+  .tile,.tile:nth-child(n),.tile:last-child:nth-child(even){grid-column:auto;grid-row:auto;aspect-ratio:4/3}
   }
 /* gallery lightbox */
 .glb{position:fixed;inset:0;z-index:100;background:rgba(255,255,255,.98);display:none;flex-direction:column}
@@ -375,7 +375,7 @@ footer .footer-credit img{height:22px;width:auto;display:block;filter:brightness
       <li>Quality Windows<small>Energy-efficient windows throughout</small></li>
       <li>Upper-Floor Laundry<small>Conveniently located laundry areas</small></li>
       <li>Wide-Plank Hardwood<small>Wide-plank hardwood floors throughout, with hardwood stairs</small></li>
-      <li>Modern Tilework<small>Ornate bathroom tilework</small></li>
+      <li>Modern Tilework<small>Beautifully detailed bathroom tile finishes</small></li>
       <li>Landscaped Grounds<small>Refined landscaping that complements the architecture.</small></li>
     </ul>
   </div>
